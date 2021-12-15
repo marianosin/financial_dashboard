@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+}
+.crypto_shelf {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 600px;
+    box-shadow: 0 0 25px gray;
+    border-collapse: collapse;
+}
+.crypto_shelf thead th {
+    background-color: yellow;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    padding:  2%;
+    
+}
+.crypto_shelf tbody tr {
+    background-color: rgba(228, 228, 228, 0.726);
+    color: black;
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.crypto_shelf tbody td {
+    padding: 10px 10px;
+}
+.crypto_shelf tbody tr:nth-of-type(even) {
+    background-color: rgba(228, 228, 228, 1);
+    color: black;
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
