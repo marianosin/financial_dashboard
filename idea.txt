@@ -1,0 +1,10 @@
+Panel de visualización de principales activos financieros
+
+
+Una página de inicio que presente diferentes tarjetas: indices, principales criptomonedas, acciones.
+Al iniciarse debe pedir un usuaripo y contraseña.
+Cada tarjeta debe llevar a una nueva pagina donde se presentará un panel que contenga un gradico de
+cubos donde se ecprese la variación diaria de cada instrumento.
+Ariiba una banda que gire para mostrar los valores absolutos de los  activos.
+Cuando se de click a uno de los cunos debe abrir un emegente con información del activo y la posición sugertida
+en caso de interés. Así también, debe aparecer el grafico de velas diarias del activo en cuestión.
