@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=Fjalla+One&family=Rajdhani:wght@300&display=swap");
+#index {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: url("../images/backgrounds/boston_skylie.jpg");
+  background-position: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Cairo', sans-serif;
+}
+
+#index h1 {
+  font-size: 26px;
+  font-family: 'Fjalla One', sans-serif;
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */

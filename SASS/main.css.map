@@ -1,0 +1,17 @@
+{
+    "version": 3,
+    "mappings": "AGCA,OAAO,CAAC,sHAAI;ACDZ,AAAA,MAAM,CAAC;EAEH,QAAQ,EAAE,KAAK;EACf,GAAG,EAAE,GAAG;EACR,IAAI,EAAE,GAAG;EACT,SAAS,EAAE,qBAAqB;EAEhC,gBAAgB,EAAE,8CAA8C;EAChE,mBAAmB,EAAE,OAAO;EAC5B,iBAAiB,EAAE,SAAS;EAC5B,eAAe,EAAE,KAAK;EAItB,WAAW,EAAE,mBAAmB;CAOnC;;AArBD,AAgBI,MAhBE,CAgBF,EAAE,CAAC;EACC,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,wBAAwB;EACrC,UAAU,EAAE,MAAM;CACrB",
+    "sources": [
+        "main.scss",
+        "components/_variables.scss",
+        "components/_mixins.scss",
+        "components/_general.scss",
+        "components/_index.scss",
+        "components/_menu.scss",
+        "components/_stocks.scss",
+        "components/_crypto.scss",
+        "components/_news.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

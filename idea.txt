@@ -1,10 +1,59 @@
 Panel de visualización de principales activos financieros
 
 
-Una página de inicio que presente diferentes tarjetas: indices, principales criptomonedas, acciones.
-Al iniciarse debe pedir un usuaripo y contraseña.
-Cada tarjeta debe llevar a una nueva pagina donde se presentará un panel que contenga un gradico de
-cubos donde se ecprese la variación diaria de cada instrumento.
-Ariiba una banda que gire para mostrar los valores absolutos de los  activos.
-Cuando se de click a uno de los cunos debe abrir un emegente con información del activo y la posición sugertida
-en caso de interés. Así también, debe aparecer el grafico de velas diarias del activo en cuestión.
+
+Descripción: Aplicación de uso personal y de escritorio para visualizar información financiera de relevancia.
+Esta aplicación se instalaría en una computadora, y correría como un sitio web.
+Debe proveer de datos en directo del mercado así como noticias, tweets o indicadores financieros extraídos de APIs publicas como por ejemplo de Binance, investing.com o yahoo finance.
+
+
+
+Secciones
+-----Login----
+El usuario debe contar con un usuario y contraseña para acceder.
+-----Menú-----
+Una vez dentro se presenta un menú de posibilidades de acceso:
+- Cryptos
+- acciones
+- indices
+- noticias
+Y un menú de accesos directos a los agentes de bolsa con los que opera
+- Invertironline
+- Tradingview
+- Binance
+- Etoro
+
+----Crypto----
+- Baner superior con la cotización de las crypto de mayor capitalización de mercado.
+    - animacion de carousel desplazandose de derecha a izquierda-
+    - idealmente con colores verdes y rojos dependiendo de si subio o bajo el activo en relación al dia anterior
+- Graficos
+    - 2 pestañas
+        - Grafico de volumentes 
+        - Grafico de velas (Se saca directamente de Tradingview que tiene widgets)
+- Lista de cryptos con ibformación de relevancia en forma de tabla
+    - Cada crypto podría delplegar una ventana emerjente dentro del aplicativo donde 
+    se presente una extensión de la misma, por ejemplo descripcion y valores de los indicadores tecnicos así como posición sujerida.
+    - Esto lo suele proveer el api de investing.com
+
+---Acciones e indices----
+
+Similar a lo anterior descripto
+
+
+----Noticias----
+La pantalla se divide en tres.
+- Baner superior presentando los principales titulares
+    - Animación cubica.
+- sidebar izquierda:
+    -Streaming de twitter
+- Sidebar derecha
+    - Descarga de un RSS los titulares y resumenes economicos de los principales diarios de interés.
+
+
+
+
+Notas:
+
+Muchas de las cosas que quiero hacer tienen widgets de Tradingview hechos en JS
+A mi me gustaría, generar los mios propios tomando uniicamente los datos de ellos, que se que es posible tomarlos con websockets y apis. ¿Es posible que haga esto en este curso?
