@@ -5,7 +5,7 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url("../images/backgrounds/boston_skylie.jpg");
+  background-image: url("../images/backgrounds/crypto_background_login.jpg");
   background-position: inherit;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,5 +16,24 @@
   font-size: 26px;
   font-family: 'Fjalla One', sans-serif;
   text-align: center;
+}
+
+#index a {
+  text-decoration: none;
+  color: #2a9c0d;
+  -webkit-transition: all linear .2s;
+  transition: all linear .2s;
+}
+
+#index a:hover {
+  color: #9c0d0d;
+}
+
+.loginCardHeaderStyle {
+  background-color: #ffe194;
+}
+
+.loginCardfooterStyle {
+  background-color: #ffe194;
 }
 /*# sourceMappingURL=main.css.map */
