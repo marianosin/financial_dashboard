@@ -17,11 +17,12 @@
     <title>Register a new user</title>
 </head>
 <body id="index">
+    <script type="module" src="JS/register.js"></script>
     <div class="container">
         <div class="d-flex justify-content-center h-100">
             <div class="card">
                 <div class="card-header">
-                    <h1>Log in</h1>
+                    <h1>Registra un usuario</h1>
                 </div>
                 <div class="card-body">
                     <form>
@@ -29,8 +30,37 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="username">
-                            
+                            <input type="text" class="form-control" placeholder="Nombre">
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Apellido">
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-birthday-cake"></i></span>
+                            </div>
+                            <input type="date" class="form-control" placeholder="Edad">
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-search-dollar"></i></span>
+                            </div>
+                            <select class="form-select form-control" aria-label="form-select-lg">
+                                <option selected>Mercado de interés</option>
+                                <option value="stock">Acciones</option>
+                                <option value="bond">Bonos/Letras</option>
+                                <option value="crypto">Criptomonedas</option>
+                                <option value="cedear">CEDEARs</option>
+                            </select>
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Usuario">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
@@ -39,13 +69,13 @@
                             <input type="password" class="form-control" placeholder="password">
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="Register now" class="btn float-right login_btn">
+                            <input type="submit" value="Registrarse" class="btn float-right login_btn">
                         </div>
                     </form>
                 </div>
                 <div class="card-footer">
                     <div class="d-flex justify-content-center links">
-                        Esta aplicación solo funciona si previamente fue cargada por su creador en el dispositivo en cuestión.
+                        <!-- Aquí va un mensaje para el usuario si así hiciera falta -->
                     </div>
                     </div>
                 </div>

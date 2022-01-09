@@ -1,3 +1,17 @@
 @mixin color_selector($color) {
     background-color: $color;
 }
+
+@mixin bg_positioner($bg-url) {
+    background-image: url($bg-url);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+@mixin box_position_fixed_centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

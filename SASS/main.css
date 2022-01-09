@@ -6,8 +6,9 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-image: url("../images/backgrounds/crypto_background_login.jpg");
-  background-position: inherit;
   background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
   background-size: cover;
   font-family: 'Cairo', sans-serif;
 }
@@ -35,5 +36,14 @@
 
 .loginCardfooterStyle {
   background-color: #ffe194;
+}
+
+#mainMenu {
+  background-image: url("../images/backgrounds/taxi.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Cairo', sans-serif;
 }
 /*# sourceMappingURL=main.css.map */

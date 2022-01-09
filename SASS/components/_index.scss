@@ -1,15 +1,8 @@
 #index {
     // Postion of box
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include box_position_fixed_centered;
     // Background definitions 
-    background-image: url($index-bg-img);
-    background-position: inherit;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    @include bg_positioner($index-bg-img);
     // Text configuration 
 
     font-family: 'Cairo', sans-serif;

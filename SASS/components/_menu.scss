@@ -1,0 +1,10 @@
+#mainMenu {
+
+    // Background definitions 
+    @include bg_positioner($main-menu-bg-img);
+    
+
+    // Text configuration 
+
+    font-family: 'Cairo', sans-serif;
+}
