@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=Fjalla+One&family=Rajdhani:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.equityCarouselContainer {
+  background-color: white;
+  border-bottom: solid 1px yellow;
+  padding-top: 1.5%;
+  padding-bottom: 0.5%;
+  padding-left: 0%;
+  margin-bottom: 2%;
+  z-index: 99;
+}
+
 #index {
   position: fixed;
   top: 50%;
@@ -45,5 +60,117 @@
   background-attachment: fixed;
   background-size: cover;
   font-family: 'Cairo', sans-serif;
+}
+
+#mainMenu a {
+  text-decoration: none;
+}
+
+.mainMenuContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardContainer__box {
+  margin-top: 0.5%;
+  border-radius: 10px;
+  padding-left: 1%;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  width: 75%;
+  background-color: white;
+  border-style: solid 1px #1a5f7a;
+}
+
+.cardContainer__box__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cardContainer__box__container__productCard {
+  background-color: gray;
+  color: #2f3640;
+  border-radius: 2px;
+  border: solid 1px red;
+  margin: 2px 2em;
+  -webkit-transition: all linear .2s;
+  transition: all linear .2s;
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cardContainer__box__container__productCard__menuOptionImg {
+  height: 150px;
+  max-width: 100%;
+}
+
+.cardContainer__box__container__productCard__menuOptionText {
+  padding: 1em;
+  text-align: center;
+}
+
+.cardContainer__box__container__productCard:hover {
+  border: solid 1px red;
+}
+
+.cardContainer__box__container__productCard:active {
+  border: solid 1px red;
+}
+
+.welcomeBar {
+  width: 60%;
+  padding: 0.5%;
+  border-radius: 10px;
+  background-color: #fff89a;
+  text-align: center;
+}
+
+/* PRODUCT CARD */
+.imgOne {
+  background-image: url(https://images.unsplash.com/photo-1517394834181-95ed159986c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1506&q=80);
+}
+
+.imgTwo {
+  background-image: url(https://images.unsplash.com/photo-1523889310790-cb91a98b017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
+}
+
+.imgThree {
+  background-image: url(https://images.unsplash.com/photo-1566940973973-d499f3993bf4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
+}
+
+.imgOne,
+.imgTwo,
+.imgThree {
+  background-size: cover;
+  background-position: center;
 }
 /*# sourceMappingURL=main.css.map */
