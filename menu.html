@@ -5,39 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
-    <link rel="stylesheet" href="SASS/main.css">
+    <link rel="stylesheet" href="/SASS/main.css">
 
     <title>Menú del tablero</title>
 </head>
 <body id="mainMenu">
+    <script type="module" src="/JS/menu.js"></script>
     <header>
-        <div class="equityCarouselContainer">
-            Carousel de principales activos
+        <div class="equityCarouselContainer" id="eqCarousel">
+            
         </div>
     </header>
     <main>
-        <section class="mainMenuContent">
-            <div class="welcomeBar">
-                Bienvenido $Usuario
-            </div>
-        </section>
         
-        <section class="cardContainer">
-            <div class="cardContainer__box">
-                <div class="cardContainer__box__container">
-                    <a href="#">
-                        <div class="cardContainer__box__container__productCard">
-                            <div class="cardContainer__box__container__productCard__menuOptionImg imgOne"></div>
-                            <div class="cardContainer__box__container__productCard__menuOptionText">
-                                <h3>London</h3>
-                                
-                            </div>
-                        </div>
-                    </a>
-                    
-                </div>
-            </div>
+        
+        <section class="cardContainer" id="menuCardContainer">
+            
         </section>
     </main>
+    <footer class="mainMenuContent">
+        <div class="welcomeBar" id="userBar">
+            Hola Usuario! Menu de opciones
+        </div>
+    </footer>
 </body>
 </html>

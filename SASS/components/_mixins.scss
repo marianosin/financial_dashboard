@@ -15,3 +15,60 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin gradient_bg($gradient-bg-simple,$gradient-bg-first,$gradient-bg-second,$gradient-bg-last) {
+    //Generates a gradient backhround
+    background: $gradient-bg-simple;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, $gradient-bg-first, $gradient-bg-second, $gradient-bg-last);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, $gradient-bg-first, $gradient-bg-second, $gradient-bg-last); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+@mixin menuCardContent($menu-card-bg-color,$menu-card-bg-grad1,$menu-card-bg-grad2, $menu-card-bg-grad3, $h2-color-1, $h2-color-2,$h2-ffamily) {
+    
+    background-color: $menu-card-bg-color;
+    background-image: linear-gradient(43deg, $menu-card-bg-grad1 0%, $menu-card-bg-grad2 46%, $menu-card-bg-grad3 100%);
+    opacity: .8;
+    transition: all .8s ease-out; 
+    
+    h2 {
+        opacity: .5;
+        color: $h2-color-1;
+        transition: opacity .5s;
+        font-family: $h2-ffamily;
+    }
+    &:hover {
+        opacity: 1;
+        -webkit-box-shadow: 20px 4px 50px -18px $menu-card-bg-grad1; 
+        box-shadow: 20px 4px 50px -18px $menu-card-bg-grad1;
+
+    h2 {
+            
+            color: $h2-color-2;
+        }
+    }
+}
+
+@mixin menuCardContentBg2($menu-card-bg-color,$menu-card-bg-grad1,$menu-card-bg-grad2, $menu-card-bg-grad3, $h2-color-1, $h2-color-2,$h2-ffamily) {
+    
+    background-color: $menu-card-bg-color;
+    background-image: linear-gradient(43deg, $menu-card-bg-grad3 0%, $menu-card-bg-grad2 46%, $menu-card-bg-grad1 100%);
+    opacity: 0;
+    transition: opacity .6s ease-out; 
+    
+    h2 {
+        opacity: .5;
+        color: $h2-color-1;
+        transition: opacity .5s;
+        font-family: $h2-ffamily;
+    }
+    &:hover {
+        opacity: 1;
+        
+
+    h2 {
+            opacity: 1;
+            color: $h2-color-2;
+        }
+    }
+}
