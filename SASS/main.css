@@ -31,6 +31,10 @@
   border-top: #181d31 2px solid;
 }
 
+#userNameBar {
+  font-weight: bold;
+}
+
 #index {
   position: fixed;
   top: 50%;
@@ -68,6 +72,14 @@
 
 .loginCardfooterStyle {
   background-color: #ffe194;
+}
+
+.notHiddenForm {
+  display: inline;
+}
+
+.hiddenForm {
+  display: none;
 }
 
 #mainMenu {

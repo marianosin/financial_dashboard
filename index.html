@@ -19,7 +19,7 @@
 </head>
 <body id="index">
     
-    <div class="container">
+    <div class="container notHiddenForm" id="loginForm">
         <div class="d-flex justify-content-center h-100">
             <div class="card">
                 <div class="card-header loginCardHeaderStyle">
@@ -47,7 +47,7 @@
                 </div>
                 <div class="card-footer loginCardfooterStyle">
                     <div class="text-center">
-                        <p>Si no tiene usuario, registreses <a href="register.html"> aquí</a>.</p>
+                        <p>Si no tiene usuario, registreses <a href="#" id="registerLink"> aquí</a>.</p>
                     </div>
                     </div>
                 </div>
@@ -55,5 +55,69 @@
         </div>
     </div>
     <script type="module" src="JS/login.js"></script>
+    <div class="container hiddenForm" id="registerForm">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header loginCardHeaderStyle">
+                    <h1>Registra un usuario</h1>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Nombre">
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Apellido">
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-birthday-cake"></i></span>
+                            </div>
+                            <input type="date" class="form-control" placeholder="Edad">
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-search-dollar"></i></span>
+                            </div>
+                            <select class="form-select form-control" aria-label="form-select-lg">
+                                <option selected>Mercado de interés</option>
+                                <option value="stock">Acciones</option>
+                                <option value="bond">Bonos/Letras</option>
+                                <option value="crypto">Criptomonedas</option>
+                                <option value="cedear">CEDEARs</option>
+                            </select>
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Usuario">
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="password">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Registrarse" class="btn float-right login_btn">
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer loginCardfooterStyle">
+                    <div>
+                        Si ya tiene usuario, haga click <a href="#" id="loginLink"> aquí</a>.
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

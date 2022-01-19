@@ -28,3 +28,13 @@
 .loginCardfooterStyle {
     @include color_selector(rgb(255, 225, 148));
 }
+
+
+.notHiddenForm {
+    display: inline;
+}
+
+.hiddenForm {
+    display: none;
+}
+

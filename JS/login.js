@@ -1,12 +1,33 @@
+//Variables de sistema
 let DASHBOARD_USERS = 'DASHBOARD_USERS' //Variable de localstorage
 let dashboard = '' //variable temporal para ser editada despues por if
 let loginStatus = ''
+
+
+
+// Variables del documento
+
+// Login elementos 
 const inputUsername = document.getElementById('username')
 const inputPassword = document.getElementById('password')
+
+//Registro
+
+const 
+
+//Cambio de formulario
 const loginBtn = document.getElementById('loginBtn')
+const registerLink = document.querySelector('#registerLink')
+const loginLink = document.querySelector('#loginLink')
+const loginForm = document.querySelector('#loginForm')
+const registerForm = document.querySelector('#registerForm')
+
+// Elementos importados 
 import { App } from "./components/App.js";
 import { User } from "./components/User.js";
 import { saveLS } from "./components/saveLS.js";
+
+
 
 // Obtengo el dato del localStorage
 let tempList = JSON.parse(localStorage.getItem(DASHBOARD_USERS))
@@ -53,7 +74,7 @@ if (!dashboard.activeSession) {
             //Acción en consecuencia del login
             console.log(dashboard.users)
 
-            window.location = './menu.html'
+            window.location = './menu/'
             } else {
                 console.log(inputUsername.value)
                 console.log(inputPassword.value)
@@ -61,8 +82,42 @@ if (!dashboard.activeSession) {
                 window.location = './?'
             }
     })
-
+    
 
 } else {
-    window.location = './menu.html'
+    window.location = './menu/'
 }
+
+// Registro de usuario
+
+
+
+
+// Cambios entre formulario de acceso y registro
+
+registerLink.addEventListener('click', ()=>{
+    
+    if (loginForm.className === 'container hiddenForm') {
+        loginForm.className = 'container notHiddenForm';
+        registerForm.className = 'container hiddenForm';
+    } else {
+        loginForm.className = 'container hiddenForm';
+        registerForm.className = 'container notHiddenForm';
+    }
+
+
+})
+
+
+loginLink.addEventListener('click', ()=>{
+    
+    if (loginForm.className === 'container hiddenForm') {
+        loginForm.className = 'container notHiddenForm';
+        registerForm.className = 'container hiddenForm';
+    } else {
+        loginForm.className = 'container hiddenForm';
+        registerForm.className = 'container notHiddenForm';
+    }
+
+
+})
