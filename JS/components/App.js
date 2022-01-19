@@ -1,8 +1,9 @@
 
 class App {
-    constructor(){
+    constructor(activeSession){
         this.users = []
         this.sections = []
+        this.activeSession = activeSession
     }
     
     addUser(user) {

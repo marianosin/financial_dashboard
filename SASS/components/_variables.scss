@@ -6,9 +6,10 @@ $index-h1-fz: 26px;
 
 
 // menu variables 
-$main-menu-bg-img: "../images/backgrounds/taxi.jpg";
+$main-menu-bg: rgb(240, 233, 210);
+$menu-card1-bg: rgb(103, 137, 131);
 $menu-ff: 'Cairo', sans-serif;
-$menu-wcb-color: rgb(255, 248, 154);
+$general-wcb-color: rgb(230, 221, 196);
 $menu-card-bg-color: #4158D0;
 $menu-card-bg-grad1: #4158D0;
 $menu-card-bg-grad2:#C850C0;
@@ -20,6 +21,7 @@ $menu-card-border-color: #ffff;
 
 
 // GEneral variables
+$general-wcb-border-top: rgb(24, 29, 49);
 $general-equity-carousel-color: white;
 $general-equity-bottom-border-color: yellow;
 $gradient-bg-simple: #0f0c29;

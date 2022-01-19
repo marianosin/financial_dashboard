@@ -1,6 +1,7 @@
 #mainMenu {
     height: 100vh;
     font-family: $menu-ff;
+    background-color: $main-menu-bg;
     a {
         text-decoration: none;
     }
@@ -17,6 +18,7 @@
     -ms-flex-pack: center;
     justify-content: center;
 }
+
 .cardContainer {
     height: 80vh;
   
@@ -39,27 +41,27 @@
 }
 
 .cardContent {
-    height: 200px;
+    height: 100px;
     width: 170px;
-    padding-top: 90%;
+    padding-top: 20%;
     background: transparent;
-    -webkit-transition: all linear .5s;
-    transition: all linear .5s;
+    -webkit-transition: all ease .5s;
+    transition: all ease .2s;
     position: relative;
     text-align: center;
-
+    
     &:hover{
-        border: 1px solid $menu-card-border-color;
-        padding-top: 50%;
+        padding-top: 20%;
         border-radius: 10px;
         font-size: 25px;
         cursor: pointer;
-        background-image: linear-gradient(43deg, $menu-card-bg-grad1 0%, $menu-card-bg-grad2 46%, $menu-card-bg-grad3 100%);
+        // background-color: gray;
+        // background-image: linear-gradient(43deg, $menu-card-bg-grad1 0%, $menu-card-bg-grad2 46%, $menu-card-bg-grad3 100%);
     }
 }
 
 .menuCard {
-    height: 200px;
+    height: 100px;
     width: 170px;
     background: grey;
     border-radius: 10px;
@@ -68,17 +70,16 @@
     -webkit-transition: all 0.8s;
     transition: all 0.8s;
     overflow: hidden;
-    background: black;
-    -webkit-box-shadow: 0 70px 63px -60px #000000;
-    box-shadow: 0 70px 63px -60px #000000;
     position: relaitive;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    
 }
 
 .menuCard1 {
     width: 170px;
-    height: 200px;
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    height: 100px;
+    background-color: $menu-card1-bg;
+    // background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     opacity: 1;
     -webkit-transition: all .8s ease-out;
     transition: all .8s ease-out;
@@ -86,29 +87,22 @@
         opacity: .5;
         color: black;
         -webkit-transition: opacity .5s;
-        border: 1px solid rgba(0, 0, 0, 0);
-        transition: all .8s;
+        
+        transition: all .8s ease-in;
         font-family: "Abel", sans-serif;
     }
 
     &:hover {
         opacity: 1;
-        border: 1px solid white;
+        
         h2 {
-            color: white;
+            top: -2%;
+            font-size: 28px;
         }
     }
 }
 
 
-.welcomeBar {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    z-index: 99;
-    padding: 0.5%;
-    padding-left: 3%;
-    background-color: $menu-wcb-color;
-}
+
 
 
