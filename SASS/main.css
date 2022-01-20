@@ -35,6 +35,14 @@
   font-weight: bold;
 }
 
+.redBackgroundInput {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.greenBackgroundInput {
+  background-color: rgba(72, 255, 0, 0.3);
+}
+
 #index {
   position: fixed;
   top: 50%;
@@ -80,6 +88,14 @@
 
 .hiddenForm {
   display: none;
+}
+
+.validationMessage {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 2%;
+  border: solid 0.5px rgba(0, 0, 0, 0.329);
 }
 
 #mainMenu {

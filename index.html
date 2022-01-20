@@ -17,8 +17,10 @@
     
     <title>Login</title>
 </head>
+
 <body id="index">
-    
+    <script type="module" src="/JS/main.js"></script>
+    <div style="background-color: white;"><div class="hiddenForm" id="validationMessage"></div></div>
     <div class="container notHiddenForm" id="loginForm">
         <div class="d-flex justify-content-center h-100">
             <div class="card">
@@ -55,6 +57,7 @@
         </div>
     </div>
     <script type="module" src="JS/login.js"></script>
+    <!-- Registrarse -->
     <div class="container hiddenForm" id="registerForm">
         <div class="d-flex justify-content-center h-100">
             <div class="card">
@@ -67,48 +70,37 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Nombre">
+                            <input type="text" class="form-control" placeholder="Nombre" id="registeredName">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Apellido">
+                            <input type="text" class="form-control" placeholder="Apellido" id="registeredLastname">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-birthday-cake"></i></span>
                             </div>
-                            <input type="date" class="form-control" placeholder="Edad">
-                        </div>
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-search-dollar"></i></span>
-                            </div>
-                            <select class="form-select form-control" aria-label="form-select-lg">
-                                <option selected>Mercado de interés</option>
-                                <option value="stock">Acciones</option>
-                                <option value="bond">Bonos/Letras</option>
-                                <option value="crypto">Criptomonedas</option>
-                                <option value="cedear">CEDEARs</option>
-                            </select>
+                            <input type="date" class="form-control" placeholder="Fecha de nacimiento" id="registeredbirthday">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Usuario">
+                            <input type="text" class="form-control" placeholder="Usuario" id="registeredUsername">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" class="form-control" placeholder="password">
+                            <input type="password" class="form-control" placeholder="password" id="registeredPassword">
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="Registrarse" class="btn float-right login_btn">
+                            <input type="submit" value="Registrarse" id="registerBtn" class="btn float-right login_btn">
                         </div>
                     </form>
+                    
                 </div>
                 <div class="card-footer loginCardfooterStyle">
                     <div>
@@ -119,5 +111,6 @@
             </div>
         </div>
     </div>
+    <script type="module" src="JS/register.js"></script>
 </body>
 </html>
