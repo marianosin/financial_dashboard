@@ -40,3 +40,32 @@
     background-color: rgba(72, 255, 0, 0.3);
     
 }
+
+
+.loadOPBtn{
+    background-color: $menu-card1-bg;
+    border: 0;
+    padding: 0.5%;
+    margin-left: 2%;
+    border-radius: 10px;
+    &:hover {
+        cursor: pointer;
+    }
+    &__dargBG {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        background-color: rgba(0, 0, 0, 0.326);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        z-index: 99;
+
+    }
+
+    &__closeSimulationBtn {
+        margin-left: 3%;
+        background-color: rgba(255, 0, 0, 0.377);
+        
+        }
+    }
