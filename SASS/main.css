@@ -219,7 +219,7 @@
   color: red;
 }
 
-#index {
+#loginPage {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -230,23 +230,23 @@
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  font-family: 'Cairo', sans-serif;
+  font-family: "Cairo", "sans-serif";
 }
 
-#index h1 {
+#loginPage h1 {
   font-size: 26px;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: "Fjalla One", "sans-serif";
   text-align: center;
 }
 
-#index a {
+#loginPage a {
   text-decoration: none;
   color: #2a9c0d;
   -webkit-transition: all linear .2s;
   transition: all linear .2s;
 }
 
-#index a:hover {
+#loginPage a:hover {
   color: #9c0d0d;
 }
 
