@@ -5,6 +5,10 @@
   margin: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 .equityCarouselContainer {
   background: #000000;
   /* fallback for old browsers */
@@ -43,7 +47,7 @@
   background-color: rgba(72, 255, 0, 0.3);
 }
 
-.loadOPBtn {
+.simulateOpBtn {
   background-color: #678983;
   border: 0;
   padding: 0.5%;
@@ -51,11 +55,11 @@
   border-radius: 10px;
 }
 
-.loadOPBtn:hover {
+.simulateOpBtn:hover {
   cursor: pointer;
 }
 
-.loadOPBtn__dargBG {
+.simulateOpBtn__dargBG {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,12 +73,150 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 99;
+  z-index: 100;
 }
 
-.loadOPBtn__closeSimulationBtn {
+.simulateOpBtn__closeSimulationBtn {
   margin-left: 3%;
   background-color: rgba(255, 0, 0, 0.377);
+}
+
+.loadOpBtn {
+  background-color: #678983;
+  border: 0;
+  padding: 0.5%;
+  margin-left: 2%;
+  border-radius: 10px;
+}
+
+.loadOpBtn:hover {
+  cursor: pointer;
+}
+
+.loadOpBtn__dargBG {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.326);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+}
+
+.loadOpBtn__closeSimulationBtn {
+  margin-left: 3%;
+  background-color: rgba(255, 0, 0, 0.377);
+}
+
+.backToMenu {
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  top: 50%;
+  text-align: center;
+  width: 40px;
+  background-color: #678983;
+  border-radius: 0 5px 5px 0px;
+  -webkit-transition: width .2s linear;
+  transition: width .2s linear;
+}
+
+.backToMenu :hover {
+  width: 50px;
+  cursor: pointer;
+}
+
+.backToMenuClose {
+  position: absolute;
+  z-index: 100;
+  left: 160px;
+  top: 20%;
+  text-align: center;
+  width: 40px;
+  background-color: #678983;
+  border-radius: 5px 0  0px 5px;
+  -webkit-transition: width .2s linear;
+  transition: width .2s linear;
+}
+
+.backToMenuClose :hover {
+  width: 50px;
+  cursor: pointer;
+}
+
+.navClosed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 0px;
+  height: 100vh;
+  font-size: 0em;
+  z-index: 98;
+  background-color: rgba(17, 17, 17, 0.653);
+  position: absolute;
+}
+
+.navClosed ul li {
+  list-style: none;
+}
+
+.navClosed ul li a {
+  color: #FFCC70;
+}
+
+.navClosed ul li :hover {
+  color: red;
+}
+
+.navClosed ul li :focus {
+  color: red;
+}
+
+.navOpen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  height: 100vh;
+  font-size: 1.6em;
+  z-index: 98;
+  background-color: rgba(17, 17, 17, 0.653);
+  position: absolute;
+}
+
+.navOpen ul li {
+  list-style: none;
+}
+
+.navOpen ul li a {
+  color: #FFCC70;
+}
+
+.navOpen ul li :hover {
+  color: red;
+}
+
+.navOpen ul li :focus {
+  color: red;
 }
 
 #index {
@@ -233,5 +375,56 @@
 .menuCard1:hover h2 {
   top: -2%;
   font-size: 28px;
+}
+
+#historyBody {
+  height: 100vh;
+  font-family: "Cairo", sans-serif;
+  background-color: #f0e9d2;
+}
+
+#historyBody a {
+  text-decoration: none;
+}
+
+.historyTableContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#tableHeader {
+  background-color: red;
+  border-radius: 10px;
+  margin-top: 5%;
+}
+
+#tableHeader th {
+  font-weight: bold;
+  margin-top: 5%;
+  padding: 6%;
+  text-align: center;
+}
+
+#historyTableBody {
+  margin-bottom: 10%;
+}
+
+#historyDisclamer {
+  padding-left: 2%;
+  padding-bottom: 5%;
+}
+
+.inputHistory {
+  border-bottom: 1px solid black;
 }
 /*# sourceMappingURL=main.css.map */

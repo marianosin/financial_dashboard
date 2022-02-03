@@ -1,0 +1,42 @@
+#historyBody {
+    height: 100vh;
+    font-family: $menu-ff;
+    background-color: $main-menu-bg;
+    a {
+        text-decoration: none;
+    }
+}
+
+.historyTableContainer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+#tableHeader {
+    background-color: red;
+    border-radius: 10px;
+    margin-top: 5%;
+
+    th {
+        font-weight: bold;
+        margin-top: 5%;
+        padding: 6%;
+        text-align: center;
+    }
+
+}
+
+#historyTableBody {
+
+    margin-bottom: 10%;
+}
+
+#historyDisclamer {
+    padding-left: 2%;
+    padding-bottom: 5%;
+}
+
+.inputHistory {
+    border-bottom: 1px solid black;
+}

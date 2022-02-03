@@ -5,6 +5,7 @@ class User {
         this.username = username;
         this.password = password;
         this.birthday = birthday;
+        this.opHistory = []
     }
 }
 

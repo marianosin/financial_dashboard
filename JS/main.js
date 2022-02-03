@@ -26,9 +26,10 @@ if (tempList == null || tempList == undefined){
 
     let stocks = new Sections('Mercado de acciones', 'Acciones', './#')
     let crypto = new Sections('Mercado de crypto', 'Cryptos', './#')
-
+    let history = new Sections('Historial de operaciones', 'Historial', '../history/')
     dashboard.addSection(stocks)
     dashboard.addSection(crypto)
+    dashboard.addSection(history)
     dashboard.addUser(user1)
 
     console.log('No existía info y fue creada')

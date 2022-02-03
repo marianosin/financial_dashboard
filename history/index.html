@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../SASS/main.css">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Ukit -->
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="style/uikit.min.css" />
+    <title>Menú del tablero</title>
+</head>
+<!-- Elementos para editar por dom -->
+<div id="editableElement"></div>
+
+<body id="historyBody">
+    <script type="module" src="../JS/history.js"></script>
+    <header>
+        <div class="equityCarouselContainer" id="eqCarousel">
+            
+        </div>
+    </header>
+    <nav id="nav" class="navClosed">
+        <ul>
+            <li><a href="#">Acciones</a></li>
+            <li><a href="#">Crypto</a></li>
+            <li><a href="../history/">Historial</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="historyTableContainer" id="historyTableContainer">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Ticker</th>
+                        <th scope="col">Monto neto</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Comisiones</th>
+                        <th scope="col">Monto total</th>
+                        <th scope="col">Activo</th>
+                        <th scope="col">Broker</th>
+                        <th scope="col">Divisa</th>
+                        <th scope="col">Fecha operada</th>
+                    </tr>
+                </thead>
+                <tbody id="historyTableBody">
+
+                </tbody>
+            </table>
+        </section>
+        <section id="historyDisclamer">
+            <p>
+                ***Esta tabla puede contener errores o simplificar el cálculo de las comisiones por operación al ser una simulación de una operación estándar.
+            </p>
+        </section>
+        <div type="button" class="backToMenu"><i class="fas fa-compass"></i></div>
+        <div type="button" class="backToMenuClose hidden"><i class="fas fa-compass"></i></div>
+    </main>
+    <footer class="mainMenuContent">
+        <div class="welcomeBar" id="userBar">
+            Hola Usuario! Menu de opciones
+        </div>
+        
+    </footer>
+</body>
+</html>

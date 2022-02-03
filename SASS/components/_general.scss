@@ -5,6 +5,10 @@
     margin: 0;
 }
 
+.hidden {
+    display: none;
+}
+
 .equityCarouselContainer {
     background: #000000;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
@@ -42,7 +46,7 @@
 }
 
 
-.loadOPBtn{
+.simulateOpBtn{
     background-color: $menu-card1-bg;
     border: 0;
     padding: 0.5%;
@@ -59,7 +63,7 @@
         width: 100vw;
         height: 100vh;
         position: fixed;
-        z-index: 99;
+        z-index: 100;
 
     }
 
@@ -69,3 +73,121 @@
         
         }
     }
+
+
+.loadOpBtn{
+    background-color: $menu-card1-bg;
+    border: 0;
+    padding: 0.5%;
+    margin-left: 2%;
+    border-radius: 10px;
+    &:hover {
+        cursor: pointer;
+    }
+    &__dargBG {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        background-color: rgba(0, 0, 0, 0.326);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        z-index: 100;
+
+    }
+
+    &__closeSimulationBtn {
+        margin-left: 3%;
+        background-color: rgba(255, 0, 0, 0.377);
+        
+        }
+    }
+
+.backToMenu {
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 50%;
+    text-align: center;
+    width: 40px;
+    background-color: $menu-card1-bg;
+    border-radius: 0 5px 5px 0px;
+    transition: width .2s linear;
+    
+    :hover {
+        width: 50px;
+        cursor: pointer;
+    }
+}
+
+.backToMenuClose {
+    position: absolute;
+    z-index: 100;
+    left: 160px;
+    top: 20%;   
+    text-align: center;
+    width: 40px;
+    background-color: $menu-card1-bg;
+    border-radius:  5px 0  0px 5px;
+    transition: width .2s linear;
+    
+    :hover {
+        width: 50px;
+        cursor: pointer;
+    }
+}
+
+
+
+// Sidebar
+
+.navClosed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0px;
+    height: 100vh;
+    font-size: 0em;
+    z-index: 98;
+    background-color: rgba(17, 17, 17, 0.653);
+    position: absolute;
+    ul li {
+        list-style: none;
+        
+        a {
+            color: $sidebar-a-color;
+        }
+        :hover {
+            color: red;
+        }
+        :focus {
+            color: red;
+        }
+    }
+}
+
+
+.navOpen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 100vh;
+    font-size: 1.6em;
+    z-index: 98;
+    background-color: rgba(17, 17, 17, 0.653);
+    position: absolute;
+    ul li {
+        list-style: none;
+        
+        a {
+            color: $sidebar-a-color;
+        }
+        :hover {
+            color: red;
+        }
+        :focus {
+            color: red;
+        }
+    }
+}
