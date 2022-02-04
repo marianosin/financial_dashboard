@@ -29,7 +29,7 @@ userBarConstructor(dashboard)
 
 // Empiezo a modificar la tabla de historial
 
-dashboard.users[0].opHistory.map((element)=>{
+dashboard.users[dashboard.activeUserPosition].opHistory.map((element)=>{
     $( `<tr class="inputHistory" ><td>${element.opId}</td><td>${element.ticker}</td><td>${element.netAmmount}</td><td>${element.price}</td><td>${element.quantity}</td><td>${element.commission}</td><td>${element.totalAmmount}</td><td>${element.exchange}</td><td>${element.eqType}</td><td>${element.currency}</td><td>${element.dateOperated}</td></tr>` ).appendTo( "#historyTableBody" );
     console.log(element)
 })

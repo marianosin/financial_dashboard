@@ -1,5 +1,5 @@
 import { OpHistory } from "./opHistory.js"
-
+import { saveLS } from "./saveLS.js";
 
 function userBarConstructor(dashboard) {
     
@@ -9,7 +9,17 @@ function userBarConstructor(dashboard) {
     //conecto con el body
     let bodyEdited = document.getElementById('editableElement')
 
-    userBar.innerHTML = `Bienvenido <span class="userNameBar">${dashboard.users[0].fullName}!</span>` 
+    //Obtengo los datos del usuario
+    let activeUserJSON = ''
+
+    dashboard.users.map((element)=>{
+        let testUser = element.username
+        if (testUser === dashboard.activeUser){
+            activeUserJSON = element
+        }
+    })
+
+    userBar.innerHTML = `Bienvenido <span class="userNameBar">${activeUserJSON.fullName}!</span>` 
     
     //Creo un elemento y lo añado a la barra
 
@@ -227,7 +237,7 @@ function userBarConstructor(dashboard) {
             loadOpInputTextEqType.type = 'text'
             loadOpInputTextEqType.className = 'form-control'
             loadOpInputTextEqType.id = 'loadOpEqType'
-            loadOpInputTextEqType.placeholder = 'EqType'
+            loadOpInputTextEqType.placeholder = 'Tipo de activo'
 
             //Botones
             let loadOpButtonGroup = document.createElement('div')
@@ -307,9 +317,11 @@ function userBarConstructor(dashboard) {
                 })
                 // Añado un regustro al usuario
                 let appUserHistory = JSON.parse(localStorage.getItem('DASHBOARD_USERS'))
-                console.log(appUserHistory.users[0].opHistory.lenght)
+                // aqui debo seleccionar el usuario que se activó
+
+                console.log(activeUserJSON.opHistory.lenght)
                 //elementos
-                let id = appUserHistory.users[0].opHistory.length
+                let id = activeUserJSON.opHistory.length
                 let ticker = readyValues[0]
                 let price = parseFloat(readyValues[1])
                 let date = readyValues[2]
@@ -325,10 +337,20 @@ function userBarConstructor(dashboard) {
                     alert('Se cargó correctamente.')
                     let newRegitration = new OpHistory(id,ticker,price, date, ammount, commission, totalAmmount, quantity, tag, 'NaN', exchange)
 
-                    appUserHistory.users[0].opHistory.push(newRegitration)
+                    activeUserJSON.opHistory.push(newRegitration)
+
+
+                    //Ahora debo sustituir el json que contiene al usuario
+
+                    appUserHistory.users.map((element,index)=>{
+                        let userMapped = element.username 
+                        if (userMapped === dashboard.activeUser) {
+                            appUserHistory.users[index] = activeUserJSON
+                        }
+                    })
     
-                    localStorage.setItem('DASHBOARD_USERS', JSON.stringify(appUserHistory))
-    
+                    saveLS('DASHBOARD_USERS', appUserHistory)
+                    console.log(appUserHistory)
                 }
 
                 

@@ -8,10 +8,11 @@ import { saveLS } from "./components/saveLS.js";
 
 // Variables del documento
 let loginStatus = ''
+let loginPosition = 0
 // Login elementos 
 const inputUsername = document.getElementById('username')
 const inputPassword = document.getElementById('password')
-
+const validationMessage = document.querySelector('#validationMessage')
 //Registro
 
 
@@ -43,6 +44,10 @@ if (!dashboard.activeSession) {
                 console.log(inputPassword.value)
                 console.log('Ingreso correcto.')
                 loginStatus = true //Cambio el estado de la sesión a activa
+                loginPosition = i
+                dashboard.activeUser = loggedUser[0]
+                alert(`La posicion del usuario logeado es ${loginPosition}`)
+                dashboard.activeUserPosition = loginPosition
                 // Actualiza localStorage
                 dashboard.activeSession = loginStatus
                 saveLS(DASHBOARD_USERS,dashboard)
@@ -56,7 +61,8 @@ if (!dashboard.activeSession) {
                 }            
         }
         if (loginStatus === false) {
-            
+            validationMessage.className = 'notHiddenForm redBackgroundInput validationMessage'
+            validationMessage.innerHTML = 'Ocurrió un error. Verifique los datos incorporados en el formulario.'
             window.location = './?'
         }
     })
