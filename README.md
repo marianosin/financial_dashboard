@@ -1,7 +1,6 @@
 # financial_dashboard
 
-This is a Financial dashboard created to centralize the information coming from the market.
+This proyect builds a local aplication for financial markets users who need a visual interface to load their operations in different markets. In this version the app supports multiuser actions, simulates commissions based on standard rate of 0.75% and loads data to a simulated database. At the moment this is saved in a localstorage but I am working to make it save as a JSON data.
 
-You can install this aplication on your computer and register your username.
 
-Once it has been done, you will have access to four dashboards, organized by tyoes of assets: crypto, stocks, indexes and news.
+All the App has been built with HTML, CSS, JavaScript and SASS.
