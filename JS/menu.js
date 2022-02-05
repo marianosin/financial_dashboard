@@ -1,16 +1,22 @@
-//Testeo si hay sesion activa
-import { DASHBOARD_USERS } from "./components/variables.js";
-let testLog = JSON.parse(localStorage.getItem(DASHBOARD_USERS))
 
-if (testLog != null) {
-    if (!testLog.activeSession) {
-        window.location.href= '../'
+$.ajax({
+    type: "GET",
+    url: "../data/App.json",
+    dataType: "json",
+    success: function (response) {
+        let testLog = response
+
+        if (testLog != null) {
+            if (!testLog.activeSession) {
+                window.location.href= '../'
+            }
+            
+        }
+        if (testLog === null) {
+            window.location.href = '../'
+        }
     }
-    
-}
-if (testLog === null) {
-    window.location.href = '../'
-}
+});
 
 
 // // Importo las clases necesarias para construir el dom
@@ -20,9 +26,16 @@ import { userBarConstructor } from "./components/userBarConstructor.js";
 
 
 
+$.ajax({
+    type: "GET",
+    url: "../data/App.json",
+    dataType: "json",
+    success: function (response) {
+        let dashboard = response
+        // Inizializo los constructores
+        headerConstructor()
+        cardConstructor(dashboard)
+        userBarConstructor(dashboard)
+    }
+});
 
-let dashboard = testLog
-// Inizializo los constructores
-headerConstructor()
-cardConstructor(dashboard)
-userBarConstructor(dashboard)
