@@ -25,7 +25,7 @@
             "description":"Page to recive and present finantial data on stocks on the user interface. Data comes from investing.com",
             "cardName": "stocks",
             "pageTitle": "Stock information",
-            "relPath":"../stocks/"
+            "relPath":"../history/"
         }
 
     ],
