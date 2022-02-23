@@ -34,10 +34,17 @@ function userBarConstructor(dashboard) {
     loadOpBtn.className = 'loadOpBtn'
     loadOpBtn.value = 'Cargar operación'
 
+
+    let closeSession = document.createElement('input')
+    closeSession.type = 'button'
+    closeSession.className = 'loadOpBtn'
+    closeSession.value = 'Log out'
+
+
     //Los incorporo a la barra.
     userBar.appendChild(simulateOpBtn)
     userBar.appendChild(loadOpBtn)
-
+    userBar.appendChild(closeSession)
     //Les doy la funcionalidad
     //Simulador de op
     
@@ -144,6 +151,17 @@ function userBarConstructor(dashboard) {
         
     })
 
+
+
+    closeSession.addEventListener('click', ()=>{
+        let dashboard = JSON.parse(localStorage.getItem('DASHBOARD_USERS'))
+        dashboard.activeSession = false;
+        dashboard.activeUser = '';
+        dashboard.activeUserPosition = 0
+        console.log('logout success')
+        localStorage.setItem('DASHBOARD_USERS', JSON.stringify(dashboard))
+        window.location.href = '../'
+    })
     //Elemento para cargar op
     loadOpBtn.addEventListener('click', ()=>{
         console.log('Dio click, va a cargar una op')
@@ -381,6 +399,7 @@ function userBarConstructor(dashboard) {
             })
             
         }
+
     })
 
 

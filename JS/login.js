@@ -7,7 +7,7 @@ import { saveLS } from "./components/saveLS.js";
 
 
 // Variables del documento
-let loginStatus = ''
+let loginStatus = false
 let loginPosition = 0
 // Login elementos 
 const inputUsername = document.getElementById('username')
@@ -46,7 +46,7 @@ if (!dashboard.activeSession) {
                 loginStatus = true //Cambio el estado de la sesión a activa
                 loginPosition = i
                 dashboard.activeUser = loggedUser[0]
-                alert(`La posicion del usuario logeado es ${loginPosition}`)
+                
                 dashboard.activeUserPosition = loginPosition
                 // Actualiza localStorage
                 dashboard.activeSession = loginStatus
@@ -63,7 +63,7 @@ if (!dashboard.activeSession) {
         if (loginStatus === false) {
             validationMessage.className = 'notHiddenForm redBackgroundInput validationMessage'
             validationMessage.innerHTML = 'Ocurrió un error. Verifique los datos incorporados en el formulario.'
-            window.location = './?'
+            
         }
     })
     
