@@ -1,16 +1,19 @@
-#index {
+
+//General parameter of page
+#loginPage {
     // Postion of box
     @include box_position_fixed_centered;
     // Background definitions 
     @include bg_positioner($index-bg-img);
     // Text configuration 
 
-    font-family: 'Cairo', sans-serif;
+    font-family: $login-page-font;
+    ;
     
     h1 {
         font-size: $index-h1-fz;
         
-        font-family: 'Fjalla One', sans-serif;
+        font-family: $h1-login-font;
         text-align: center;
     }
     a {
@@ -29,7 +32,7 @@
     @include color_selector(rgb(255, 225, 148));
 }
 
-
+//Changing between forms
 .notHiddenForm {
     display: inline;
 }

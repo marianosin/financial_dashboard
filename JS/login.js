@@ -7,11 +7,12 @@ import { saveLS } from "./components/saveLS.js";
 
 
 // Variables del documento
-let loginStatus = ''
+let loginStatus = false
+let loginPosition = 0
 // Login elementos 
 const inputUsername = document.getElementById('username')
 const inputPassword = document.getElementById('password')
-
+const validationMessage = document.querySelector('#validationMessage')
 //Registro
 
 
@@ -31,27 +32,39 @@ if (!dashboard.activeSession) {
     loginBtn.addEventListener('mousedown', ()=>{
         // Si el dato del usuario coincide con lo que se toma de los inputs
         
-        if ((dashboard.users[0].username === inputUsername.value ) && (dashboard.users[0].password === inputPassword.value)) {
-            console.log(inputUsername.value)
-            console.log(inputPassword.value)
-            console.log('Ingreso correcto.')
-            loginStatus = true //Cambio el estado de la sesión a activa
-            // Actualiza localStorage
-            dashboard.activeSession = loginStatus
-            saveLS(DASHBOARD_USERS,dashboard)
-            console.log('dio click y se guardó el elemento')
-            console.log(JSON.parse(localStorage.getItem(DASHBOARD_USERS)))
-            //Acción en consecuencia del login
-            console.log(dashboard.users)
+        let userList = []
+        dashboard.users.map((element)=>{
+            userList.push([element.username, element.password])
+        })
 
-            window.location = './menu/'
-            
-            } else {
+        for (let i = 0; i < userList.length; i++) {
+            const loggedUser = userList[i];
+            if ((loggedUser[0]=== inputUsername.value ) && (loggedUser[1] === inputPassword.value)) {
                 console.log(inputUsername.value)
                 console.log(inputPassword.value)
-                alert('Usuario y/o contraseña son incorrectos. Inténtelo nuevamente.')
-                window.location = './?'
-            }
+                console.log('Ingreso correcto.')
+                loginStatus = true //Cambio el estado de la sesión a activa
+                loginPosition = i
+                dashboard.activeUser = loggedUser[0]
+                
+                dashboard.activeUserPosition = loginPosition
+                // Actualiza localStorage
+                dashboard.activeSession = loginStatus
+                saveLS(DASHBOARD_USERS,dashboard)
+                console.log('dio click y se guardó el elemento')
+                console.log(JSON.parse(localStorage.getItem(DASHBOARD_USERS)))
+                //Acción en consecuencia del login
+                console.log(dashboard.users)
+    
+                window.location = './menu/'
+                
+                }            
+        }
+        if (loginStatus === false) {
+            validationMessage.className = 'notHiddenForm redBackgroundInput validationMessage'
+            validationMessage.innerHTML = 'Ocurrió un error. Verifique los datos incorporados en el formulario.'
+            
+        }
     })
     
 
@@ -73,4 +86,3 @@ registerLink.addEventListener('click', ()=>{
 
 
 })
-

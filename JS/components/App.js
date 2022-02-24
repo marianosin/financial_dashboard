@@ -4,6 +4,8 @@ class App {
         this.users = []
         this.sections = []
         this.activeSession = activeSession
+        this.activeUser = ''
+        this.activeUserPosition = 0 //En caso de que no lo encuentre al usuario tomara el usuario test
     }
     
     addUser(user) {
