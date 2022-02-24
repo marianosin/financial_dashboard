@@ -13,19 +13,19 @@ loginTester()
 
 
 //Construyo el menu
-
-$.ajax({
-    type: "GET",
-    url: "../data/App.json",
-    dataType: "json",
-    success: function (response) {
-        let dashboard = response
-        // Inizializo los constructores
-        
-        cardConstructor(dashboard)
-        
-    }
+$(document).ready(function () {
+    $.ajax({
+        type: "GET",
+        url: "../data/App.json",
+        dataType: "json",
+        success: function (response) {
+            let dashboard = response
+            // Inizializo los constructores
+            
+            cardConstructor(dashboard)
+            
+        }
+    });
 });
-
 
 userBarConstructor(dashboard)
