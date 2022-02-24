@@ -352,7 +352,7 @@ function userBarConstructor(dashboard) {
 
                 //Solo en caso de tener todos los valores
                 if (readyValues.length==6) {
-                    alert('Se cargó correctamente.')
+                    
                     let newRegitration = new OpHistory(id,ticker,price, date, ammount, commission, totalAmmount, quantity, tag, 'NaN', exchange)
 
                     activeUserJSON.opHistory.push(newRegitration)
@@ -368,7 +368,7 @@ function userBarConstructor(dashboard) {
                     })
     
                     saveLS('DASHBOARD_USERS', appUserHistory)
-                    console.log(appUserHistory)
+                    window.location.href = "../history/"
                 }
 
                 
