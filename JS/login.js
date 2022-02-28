@@ -41,9 +41,7 @@ $(document).ready(function () {
             for (let i = 0; i < userList.length; i++) {
                 const loggedUser = userList[i];
                 if ((loggedUser[0]=== inputUsername.value ) && (loggedUser[1] === inputPassword.value)) {
-                    console.log(inputUsername.value)
-                    console.log(inputPassword.value)
-                    console.log('Ingreso correcto.')
+                    
                     loginStatus = true //Cambio el estado de la sesión a activa
                     loginPosition = i
                     dashboard.activeUser = loggedUser[0]
@@ -52,10 +50,7 @@ $(document).ready(function () {
                     // Actualiza localStorage
                     dashboard.activeSession = loginStatus
                     saveLS(DASHBOARD_USERS,dashboard)
-                    console.log('dio click y se guardó el elemento')
-                    console.log(JSON.parse(localStorage.getItem(DASHBOARD_USERS)))
-                    //Acción en consecuencia del login
-                    console.log(dashboard.users)
+              
         
                     window.location = './menu/'
                     
