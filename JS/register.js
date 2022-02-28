@@ -37,10 +37,10 @@ for (let index = 0; index < dashboard.users.length; index++) {
 username.addEventListener('keyup', ()=>{
 
     inUse = listOfUsernames.includes(username.value)
-    console.log(inUse)
+    
     if(!inUse){
         username.className = 'form-control greenBackgroundInput'
-        console.log('Este usename está disponible')
+        c
         
         
         
@@ -50,7 +50,7 @@ username.addEventListener('keyup', ()=>{
     } 
     if (inUse) {
         username.className = 'form-control redBackgroundInput'
-        console.log('Este usename no está disponible')
+        
     }
 })
 
@@ -76,7 +76,7 @@ registerBtn.addEventListener('click', ()=>{
         dashboard.users.push(regiterNewUser)
 
         saveLS(DASHBOARD_USERS,dashboard)
-        console.log(dashboard.users)
+        
         // dashboard.addUser(regiterNewUser)
         validationMessage.className = 'notHiddenForm greenBackgroundInput validationMessage'
         validationMessage.innerHTML = 'Usuario registrado correctamente. Para continuar, de click <a href="./" > aquí</a>'
@@ -92,7 +92,7 @@ registerBtn.addEventListener('click', ()=>{
 
 //Cambios de formularios
 loginLink.addEventListener('click', ()=>{
-    console.log('dio click a cambio de formulario')
+    
     if (loginForm.className === 'container hiddenForm') {
         loginForm.className = 'container notHiddenForm';
         registerForm.className = 'container hiddenForm';
@@ -106,18 +106,3 @@ loginLink.addEventListener('click', ()=>{
 
 
 })
-
-// console.log(user1)
-// let correctRegistration = true
-// for (let key in user1) {
-//     console.log(key, user1[key]);
-//     if ((user1[key]===null) || (user1[key]==='')) {
-//         correctRegistration = false
-//     }
-// }
-// // Mensaje de advertencia 
-// if (correctRegistration === true){
-//     alert("Su usuario fue creado correctamente.")
-// } else {
-//     alert("Debe completar todos los campos correctamente. Recuerde introducir números en su edad.")
-// }
