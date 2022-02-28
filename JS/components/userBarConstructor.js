@@ -49,7 +49,7 @@ function userBarConstructor(dashboard) {
     //Simulador de op
     
     simulateOpBtn.addEventListener('click', ()=>{
-        console.log('Dio click, va a cargar una op');
+        
 
         //creo el elemento contenedor del formulario y que sraá el fondo
         if (bodyEdited.className != 'simulateOpBtn__dargBG') {
@@ -158,13 +158,13 @@ function userBarConstructor(dashboard) {
         dashboard.activeSession = false;
         dashboard.activeUser = '';
         dashboard.activeUserPosition = 0;
-        console.log('logout success');
+        
         localStorage.setItem('DASHBOARD_USERS', JSON.stringify(dashboard));
         window.location.href = '../';
     })
     //Elemento para cargar op
     loadOpBtn.addEventListener('click', ()=>{
-        console.log('Dio click, va a cargar una op');
+        
 
         //creo el elemento contenedor del formulario y que sraá el fondo
         if (bodyEdited.className != 'loadOpBtn__dargBG') {
@@ -317,10 +317,10 @@ function userBarConstructor(dashboard) {
                 loadOpInputTextEqType,
                 loadOpInputTextExchange]
                 let readyValues = []
-                console.log(readyValues)
+                
                 listOfValues.map(function(element){
                     if (element.value === null || element.value === undefined || element.value === ''){
-                        console.log(element.value);
+                        
                         element.className = 'form-control redBackgroundInput';
                     } else {
                         element.className = 'form-control';
@@ -329,15 +329,14 @@ function userBarConstructor(dashboard) {
                         
                     }
                 if (readyValues){
-                    console.log(readyValues);
-                    console.log('Deberia imprimir la lista de valores');
+
                 }
                 })
                 // Añado un regustro al usuario
                 let appUserHistory = JSON.parse(localStorage.getItem('DASHBOARD_USERS'));
                 // aqui debo seleccionar el usuario que se activó
 
-                console.log(activeUserJSON.opHistory.lenght)
+                
                 //elementos
                 let id = activeUserJSON.opHistory.length;
                 let ticker = readyValues[0];
@@ -375,7 +374,7 @@ function userBarConstructor(dashboard) {
 
                 //Compruebo la carga, después estaria bien que swe abra otro dialogo antes de confirmar
                 let tempTest = JSON.parse(localStorage.getItem('DASHBOARD_USERS'));
-                console.log(tempTest.users[0].opHistory);
+                
                 })
 
 
